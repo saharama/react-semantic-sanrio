@@ -9,6 +9,23 @@ body {
   font-weight: bold;
   background-color: #3171B8 !important;
   color: white !important;
+  margin-bottom: 0px;
+}
+
+.ui.menu.topMenu {
+  border: none;
+  box-shadow: none;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+  background-color: #3171B8 !important;
+  color: white !important;
+  margin-bottom: 0px;
+}
+
+.ui.menu.middleMenu {
+  border: none;
+  box-shadow: none;
+  margin: 0px;
 }
 
 .ui.topmenu.item{
