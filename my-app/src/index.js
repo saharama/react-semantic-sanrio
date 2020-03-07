@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
 import 'semantic-ui-css/semantic.min.css';
-import { Container, Header, Menu, Image, Icon, Grid, List } from 'semantic-ui-react';
+import { Container, Header, Menu, Image, Icon, Grid, List, Input } from 'semantic-ui-react';
 
 const srcHelloKittyHead = 'https://cdn.clipart.email/51680a4ee672aedf5e1769c454975447_hello-kitty-hello-kitty-head-clipart-in-png-file-gifyu_2000-1424.png'
 const srcSanrioLogo = 'https://sanrio-production-weblinc.netdna-ssl.com/assets/weblinc/store_front/logo_home-cecf45498400cb4ccb7edecdb351f23f9ede792068c0092aaac20fa818c61c93.png'
@@ -91,7 +91,7 @@ class SanrioJapangeles extends React.Component {
 class StaffPicks extends React.Component {
   render() {
     return (
-        <Container>
+        <Container className = "staffPicks">
         <Grid centered>
           <Grid.Row>
             <h2>Shop Sanrio Staff Picks!</h2>
@@ -100,10 +100,12 @@ class StaffPicks extends React.Component {
             <Grid.Column>
               <Image src={'https://sanrio-production-weblinc.netdna-ssl.com/product_images/sanrio-com-e-gift-card/5762254269702d6dfb002de4/detail.jpg'} size='small' />
               <h5>Sanrio Online Store e-Gift Card</h5>
+              $25.00-$200.00
             </Grid.Column>
             <Grid.Column>
               <Image src={'https://sanrio-production-weblinc.netdna-ssl.com/product_images/little-twin-stars-room-lamp/5dc34af573616e3d89000083/detail.jpg'} size='small' />
               <h5>Little Twin Stars Room Lamp</h5>
+              $62.00
             </Grid.Column>
             <Grid.Column>
               <Image src={'https://sanrio-production-weblinc.netdna-ssl.com/product_images/aggretsuko-plush-id-badge-holder/5d1babdb73616e7ad4000020/detail.jpg'} size='small' />
@@ -120,6 +122,7 @@ class StaffPicks extends React.Component {
             <Grid.Column>
               <Image src={'https://sanrio-production-weblinc.netdna-ssl.com/product_images/gudetama-handy-dandy-cream-peach-scented/5baeced973616e76ed000045/detail.jpg'} size='small' />
               <h5>The Creme Shop: Gudetama Handy Dandy Hand Cream</h5>
+              $10.00
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -128,11 +131,61 @@ class StaffPicks extends React.Component {
   }
 }
 
-class HelloFooter extends React.Component {
+class BraceletAd extends React.Component {
+  render() {
+    return(
+        <Container className = "braceletAd">
+          <Image src={"https://sanrio-production-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTkvMTIvMTcvMTMvMjIvNTcvNzMxLzEyMTQyMDE5X0hQX0xlYXRoZXJ0cmVhdHlfMTYwMHgzNTBfQmFubmVyXzIuanBnIl0sWyJwIiwib3B0aW0iXV0/12142019_HP_Leathertreaty_1600x350_Banner-2.jpg?sha=4e1e3ad298ceb90f"}/>
+        </Container>
+    )
+  }
+}
 
-    render() {
+class LimitedEdition extends React.Component {
+  render() {
+    return(
+      <Container className = "limitedEdition">
+        <Grid centered columns={2}>
+          <Grid.Column>
+          <Image src={"https://sanrio-production-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMjAvMDMvMDYvMjEvMDkvMTQvMzc4LzJ1cF9yZWNfZm90bV9tYXJjaF9jbl8wMzA5MjAyMF9jYWxlbmRhci5qcGciXSxbInAiLCJvcHRpbSJdXQ/2up-rec_fotm-march-cn_03092020_calendar.jpg?sha=58ce13a9822f2eb5"} />
+          </Grid.Column>
+          <Grid.Column>
+            <Image src={"https://sanrio-production-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMjAvMDMvMDYvMjEvMDkvMTQvMzc4LzJ1cF9yZWNfZm90bV9tYXJjaF9jbl8wMzA5MjAyMF9jYWxlbmRhci5qcGciXSxbInAiLCJvcHRpbSJdXQ/2up-rec_fotm-march-cn_03092020_calendar.jpg?sha=58ce13a9822f2eb5"} />
+          </Grid.Column>
+        </Grid>
+      </Container>
+    )
+  }
+}
+
+class SpotlightPochacco extends React.Component {
+  render() {
     return (
-        <div className='footer'>
+        <div>
+          <Container className="spotlightPochacco">
+            <h1>IN THE SPOTLIGHT...</h1>
+            <Grid verticalAlign="middle" columns={2}>
+              <Grid.Column width={4}>
+                <Image size='medium' src={"https://sanrio-production-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMjAvMDIvMjcvMjEvNTUvMzgvNTkyL1RodW1ibmFpbF83NDJfUGl4ZWxzLmpwZyJdLFsicCIsIm9wdGltIl1d/Thumbnail%20742%20Pixels.jpg?sha=7ec814859469840b"} />
+              </Grid.Column>
+              <Grid.Column width={9}>
+                <h2>Pochacco Carrot Patch Cake</h2>
+                Did you know Pochacco is a vegetarian? His favorite vegetables are carrots! So join this fun-loving pup and his pals for a delicious (early) birthday celebration with this Pochacco Carrot Patch Cake recipe. <br/>
+                LEARN MORE<Icon fitted name="caret right" />
+              </Grid.Column>
+            </Grid>
+          </Container>
+        </div>
+    )
+
+  }
+}
+
+class FooterMenu extends React.Component {
+
+  render() {
+    return (
+        <div className='footerMenu'>
         <Container>
           <Grid centered columns={4}>
             <Grid.Column>
@@ -176,7 +229,46 @@ class HelloFooter extends React.Component {
         </div>
     );
   }
+}
+
+class BottomFooter extends React.Component {
+  render() {
+    return(
+        <div className = "bottomBackground">
+        <Container className="bottomContainer">
+          <Grid>
+            <Grid.Row>
+              <h3>Sign up for Email</h3>
+            </Grid.Row>
+            <Grid.Row>
+              Be the first to get the scoop on new releases, exclusive events, free gifts,<br/>
+              shipping offers and more!
+            </Grid.Row>
+            <Grid.Row>
+              <Input action={{
+                content: 'Join',
+                color: 'red',
+              }}
+                     placeholder="enter your email address"
+              />
+            </Grid.Row>
+            <Grid.Row>
+              <Icon inverted size='big' name='facebook f'/>
+              <Icon inverted size='big' name='twitter'/>
+              <Icon inverted size='big' name='instagram'/>
+              <Icon inverted size='big' name='pinterest p'/>
+              <Icon inverted size='big' name='youtube'/>
+            </Grid.Row>
+            <Grid.Row>
+              © 2020 SANRIO CO., LTD. All Sanrio characters that appear on this website are protected<br/>
+              Copy created by ICS314 S20
+            </Grid.Row>
+          </Grid>
+        </Container>
+        </div>
+    )
   }
+}
 
 class Sanrio extends React.Component {
 
@@ -189,7 +281,11 @@ class Sanrio extends React.Component {
           <Vanity/>
           <SanrioJapangeles/>
           <StaffPicks/>
-          <HelloFooter/>
+          <BraceletAd/>
+          <LimitedEdition/>
+          <SpotlightPochacco/>
+          <FooterMenu/>
+          <BottomFooter/>
         </div>
     );
   }
