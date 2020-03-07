@@ -28,8 +28,8 @@ body {
 .footerMenu {
   background-color: #DBF4FC !important;
   margin-top: 10px;
-  margin-bottom: 15px;
-  padding: 10px;
+  padding-bottom: 45px;
+  padding-top: 10px;
 }
 
 .ui.list .list>.item, .ui.list>.item, ol.ui.list li, ul.ui.list li {
